@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Brick Development</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.jpg" alt="Brick Development Logo"></a>
+        </div>
+        <button class="mobile-toggle">â˜°</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:6049083800" style="color: var(--secondary); font-weight: 700; margin-left: 10px; font-size: 0.85rem;">Call Today: 604 908-3800</a></li></ul>
+    </header>
+
+    <section class="container fade-in">
+        <h1 style="text-align: center; color: var(--primary);">Interactive Portfolio</h1>
+        <p style="text-align: center; color: var(--text-light); max-width: 600px; margin: 0 auto 40px auto;">Click any image to expand. Use the filters below to explore our recent coastal builds, luxury renovations, and live work-in-progress job sites.</p>
+        
+        <!-- Interactive Filters -->
+        <div class="filter-container fade-in">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="new-build">New Coastal Builds</button>
+            <button class="filter-btn" data-filter="renovation">Renovations</button>
+            <button class="filter-btn" data-filter="wip">Work In Progress</button>
+        </div>
+
+        <div class="grid">
+            <!-- Work in progress cards -->
+            <div class="card project-card wip gallery-item fade-in">
+                <img src="assets/images/exterior.jpg" alt="WIP Framing">
+                <div class="card-content">
+                    <h3>[WIP] Point Grey Coastal Home</h3>
+                    <p>Current work in progress on a 4,000 sq ft custom coastal home. Structural phase.</p>
+                </div>
+            </div>
+            <div class="card project-card wip gallery-item fade-in">
+                <img src="assets/images/basement.jpg" alt="WIP Interior">
+                <div class="card-content">
+                    <h3>[WIP] West Vancouver Interior</h3>
+                    <p>Interior finishing phase for a major luxury gut renovation overlooking the ocean.</p>
+                </div>
+            </div>
+            <div class="card project-card wip gallery-item fade-in">
+                <img src="assets/images/deck.jpg" alt="WIP Deck">
+                <div class="card-content">
+                    <h3>[WIP] Kitsilano Outdoor Living</h3>
+                    <p>Custom decking and landscape integration for a luxury beachfront property.</p>
+                </div>
+            </div>
+
+            <!-- New Builds -->
+            <div class="card project-card new-build gallery-item fade-in">
+                <img src="assets/images/hero_coastal.jpg" alt="West Vancouver Coastal Home">
+                <div class="card-content">
+                    <h3>West Van Coastal Custom</h3>
+                    <p>A modern Pacific Northwest custom build featuring glass walls overlooking the ocean.</p>
+                </div>
+            </div>
+            <div class="card project-card new-build gallery-item fade-in">
+                <img src="assets/images/landscaping.jpg" alt="Point Grey Estate">
+                <div class="card-content">
+                    <h3>Point Grey Estate</h3>
+                    <p>Luxury new build showcasing premium landscaping, concrete pavers, and retaining walls.</p>
+                </div>
+            </div>
+            <div class="card project-card new-build gallery-item fade-in">
+                <img src="assets/images/exterior.jpg" alt="East Van Duplex">
+                <div class="card-content">
+                    <h3>Lions Bay Modern</h3>
+                    <p>Modern coastal home designed with high-efficiency energy systems and natural cedar siding.</p>
+                </div>
+            </div>
+
+            <!-- Renovations -->
+            <div class="card project-card renovation gallery-item fade-in">
+                <img src="assets/images/kitchen.jpg" alt="Kitchen Renovation">
+                <div class="card-content">
+                    <h3>Yaletown Penthouse Kitchen</h3>
+                    <p>Complete gut and renovation into a sleek, modern luxury kitchen space.</p>
+                </div>
+            </div>
+            <div class="card project-card renovation gallery-item fade-in">
+                <img src="assets/images/bathroom.jpg" alt="Bathroom Renovation">
+                <div class="card-content">
+                    <h3>North Shore Spa Retreat</h3>
+                    <p>A seamless high-end bathroom renovation maximizing natural light and luxury finishes.</p>
+                </div>
+            </div>
+            <div class="card project-card renovation gallery-item fade-in">
+                <img src="assets/images/painting.jpg" alt="Interior Finishing">
+                <div class="card-content">
+                    <h3>Downtown Condo Remodel</h3>
+                    <p>High-end interior finishing of a penthouse suite, featuring custom wainscoting and millwork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fade-in" style="padding: 40px 5%; line-height: 1.8; margin-top: auto;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="color: var(--secondary); font-weight: 600; margin-bottom: 10px;">Proudly Servicing the Greater Vancouver Area</p>
+            <p style="font-size: 0.9rem; margin-bottom: 20px; color: #ddd;">Vancouver &bull; North Vancouver &bull; West Vancouver &bull; Burnaby &bull; Richmond &bull; Coquitlam &bull; Surrey &bull; Langley &bull; New Westminster</p>
+            <p>&copy; 2026 Brick Development. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
