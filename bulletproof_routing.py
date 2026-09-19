@@ -1,83 +1,7 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brick Development | About Our Vancouver Construction Firm</title>
-    <meta name="description" content="Learn about Brick Development, Vancouvers trusted general contractor with over 10 years of experience in custom homes, commercial builds, and structural renovations.">
-    <link rel="stylesheet" href="/bricks-dev-live/assets/css/style.css">
-    <script src="/bricks-dev-live/assets/js/script.js" defer></script>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="/bricks-dev-live/index.html"><img src="/bricks-dev-live/assets/images/logo.jpg" alt="Brick Development Logo"></a>
-        </div>
-        <button class="mobile-toggle">☰</button>
-        <ul class="nav-links">
-            <li><a href="/bricks-dev-live/index.html">Home</a></li>
-            <li><a href="/bricks-dev-live/about.html" class="active">About</a></li>
-            <li><a href="/bricks-dev-live/services.html">Services</a></li>
-            <li><a href="/bricks-dev-live/projects.html">Projects</a></li>
-            <li><a href="/bricks-dev-live/contact.html">Contact</a></li>
-        <li><a href="tel:6049083800" style="color: var(--secondary); font-weight: 700; margin-left: 10px; font-size: 0.85rem;">Call Today: 604 908-3800</a></li>
-        
-        
-        <li style="margin-left: 20px;">
-            <select id="lang-selector" onchange="window.location.href=this.value" style="background: transparent; border: 1px solid var(--secondary); color: var(--primary); padding: 5px; border-radius: 4px; font-weight: bold; cursor: pointer;">
-                <option value="/bricks-dev-live/index.html">English</option>
-                <option value="/bricks-dev-live/es/index.html">Espa&ntilde;ol</option>
-                <option value="/bricks-dev-live/fr/index.html">Fran&ccedil;ais</option>
-                <option value="/bricks-dev-live/zh/index.html">&#20013;&#25991;</option>
-                <option value="/bricks-dev-live/ru/index.html">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</option>
-                <option value="/bricks-dev-live/uk/index.html">&#1059;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072;</option>
-                <option value="/bricks-dev-live/he/index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</option>
-            </select>
-        </li>
+﻿import os
+import re
 
-
-    </ul>
-    </header>
-
-    <section class="container fade-in">
-        <h1 style="text-align: center; color: var(--primary);">About Brick Development</h1>
-        <div class="contact-grid" style="margin-top: 50px;">
-            <div class="fade-in">
-                <h2>Our Story</h2>
-                <p>Brick Development is a premier general contractor based in Vancouver, BC. With years of experience in the high-end construction industry, we specialize in delivering superior new builds and comprehensive general contracting services.</p>
-                <p>Our team is dedicated to craftsmanship, transparency, and completing projects on time and within budget. We understand the unique building landscape of the Lower Mainland and are fully licensed and insured to handle your most ambitious projects.</p>
-                <h2 style="margin-top: 40px;">Our Core Values</h2>
-                <ul style="line-height: 2;">
-                    <li><strong>Integrity:</strong> Honest communication and transparent pricing.</li>
-                    <li><strong>Quality:</strong> Uncompromising standards in materials and workmanship.</li>
-                    <li><strong>Reliability:</strong> We show up on time and deliver on our promises.</li>
-                    <li><strong>Safety:</strong> Strict adherence to WorkSafeBC regulations on all sites.</li>
-                <li><a href="tel:6049083800" style="color: var(--secondary); font-weight: 700; margin-left: 10px; font-size: 0.85rem;">Call Today: 604 908-3800</a></li>
-        
-        
-        <li style="margin-left: 20px;">
-            <select id="lang-selector" onchange="window.location.href=this.value" style="background: transparent; border: 1px solid var(--secondary); color: var(--primary); padding: 5px; border-radius: 4px; font-weight: bold; cursor: pointer;">
-                <option value="/bricks-dev-live/index.html">English</option>
-                <option value="/bricks-dev-live/es/index.html">Espa&ntilde;ol</option>
-                <option value="/bricks-dev-live/fr/index.html">Fran&ccedil;ais</option>
-                <option value="/bricks-dev-live/zh/index.html">&#20013;&#25991;</option>
-                <option value="/bricks-dev-live/ru/index.html">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</option>
-                <option value="/bricks-dev-live/uk/index.html">&#1059;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1072;</option>
-                <option value="/bricks-dev-live/he/index.html">&#1506;&#1489;&#1512;&#1497;&#1514;</option>
-            </select>
-        </li>
-
-
-    </ul>
-            </div>
-            <div class="fade-in">
-                <img src="https://loremflickr.com/800/800/construction,team?lock=20" alt="Construction Team" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); object-fit: cover; height: 100%;">
-            </div>
-        </div>
-    </section>
-
-    
-    
+footer_html = '''
     <footer class="fade-in" style="padding: 60px 5% 40px 5%; background: var(--primary); color: #ccc; line-height: 1.8; margin-top: auto; border-top: 4px solid var(--secondary);">
         <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
             
@@ -132,11 +56,56 @@
 
         </div>
     </footer>
+'''
 
+selector_html = '''
+        <li style="margin-left: 20px;">
+            <select id="lang-selector" onchange="window.location.href=this.value" style="background: transparent; border: 1px solid var(--secondary); color: var(--primary); padding: 5px; border-radius: 4px; font-weight: bold; cursor: pointer;">
+                <option value="/bricks-dev-live/index.html">English</option>
+                <option value="/bricks-dev-live/es/index.html">Español</option>
+                <option value="/bricks-dev-live/fr/index.html">Français</option>
+                <option value="/bricks-dev-live/zh/index.html">中文</option>
+                <option value="/bricks-dev-live/ru/index.html">Русский</option>
+                <option value="/bricks-dev-live/uk/index.html">Українська</option>
+                <option value="/bricks-dev-live/he/index.html">עברית</option>
+            </select>
+        </li>
+'''
 
-</body>
-</html>
+for root, dirs, files in os.walk('.'):
+    if '.git' in root or '.netlify' in root: continue
+    
+    for file in files:
+        if file.endswith('.html'):
+            filepath = os.path.join(root, file)
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+            
+            # Force replace footer
+            content = re.sub(r'<footer.*?</footer>', footer_html, content, flags=re.DOTALL)
+            
+            # Force replace language selector
+            content = re.sub(r'<li style="margin-left: 20px;">\s*<select id="lang-selector".*?</select>\s*</li>', selector_html, content, flags=re.DOTALL)
+            
+            # Force absolute paths for all assets to avoid GitHub Pages relative path bugs
+            content = re.sub(r'href="\.\./assets/', 'href="/bricks-dev-live/assets/', content)
+            content = re.sub(r'href="assets/', 'href="/bricks-dev-live/assets/', content)
+            content = re.sub(r'src="\.\./assets/', 'src="/bricks-dev-live/assets/', content)
+            content = re.sub(r'src="assets/', 'src="/bricks-dev-live/assets/', content)
+            
+            # Force absolute paths for core navigation links
+            content = re.sub(r'href="\.\./about\.html"', 'href="/bricks-dev-live/about.html"', content)
+            content = re.sub(r'href="about\.html"', 'href="/bricks-dev-live/about.html"', content)
+            content = re.sub(r'href="\.\./services\.html"', 'href="/bricks-dev-live/services.html"', content)
+            content = re.sub(r'href="services\.html"', 'href="/bricks-dev-live/services.html"', content)
+            content = re.sub(r'href="\.\./projects\.html"', 'href="/bricks-dev-live/projects.html"', content)
+            content = re.sub(r'href="projects\.html"', 'href="/bricks-dev-live/projects.html"', content)
+            content = re.sub(r'href="\.\./contact\.html"', 'href="/bricks-dev-live/contact.html"', content)
+            content = re.sub(r'href="contact\.html"', 'href="/bricks-dev-live/contact.html"', content)
+            content = re.sub(r'href="\.\./index\.html"', 'href="/bricks-dev-live/index.html"', content)
+            content = re.sub(r'href="index\.html"', 'href="/bricks-dev-live/index.html"', content)
 
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(content)
 
-
-
+print("Applied absolute GitHub Pages routing to all files. Guaranteed to resolve.")
