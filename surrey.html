@@ -12,14 +12,26 @@
         <div class="logo">
             <a href="index.html"><img src="assets/images/logo.jpg" alt="Brick Development Logo"></a>
         </div>
-        <button class="mobile-toggle">â˜°</button>
+        <button class="mobile-toggle">☰</button>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
-        <li><a href="tel:6049083800" style="color: var(--secondary); font-weight: 700; margin-left: 10px; font-size: 0.85rem;">Call Today: 604 908-3800</a></li></ul>
+        <li><a href="tel:6049083800" style="color: var(--secondary); font-weight: 700; margin-left: 10px; font-size: 0.85rem;">Call Today: 604 908-3800</a></li>
+        <li style="margin-left: 20px;">
+            <select id="lang-selector" onchange="window.location.href=this.value" style="background: transparent; border: 1px solid var(--secondary); color: var(--primary); padding: 5px; border-radius: 4px; font-weight: bold; cursor: pointer;">
+                <option value="index.html" selected>English</option>
+                <option value="es/index.html">Español</option>
+                <option value="fr/index.html">Français</option>
+                <option value="zh/index.html" >中文</option>
+                <option value="ru/index.html">Русский</option>
+                <option value="uk/index.html">Українська</option>
+                <option value="he/index.html">עברית</option>
+            </select>
+        </li>
+    </ul>
     </header>
 
     <section class="hero fade-in">
@@ -98,30 +110,79 @@
         <h2>Client Testimonials</h2>
         <div class="review-grid">
             <div class="review-card fade-in">
-                <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
                 <p class="quote">"We hired Brick Development for a full gut renovation of our Kitsilano home. The attention to detail and craftsmanship is absolutely unparalleled. True professionals."</p>
-                <p class="author">â€” Sarah T., Kitsilano</p>
+                <p class="author">— Sarah T., Kitsilano</p>
             </div>
             <div class="review-card fade-in">
-                <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
                 <p class="quote">"Our custom build in Point Grey was completed on time and exactly to budget. They made a complex, multi-million dollar project feel effortless from start to finish."</p>
-                <p class="author">â€” James & Emily W., Point Grey</p>
+                <p class="author">— James & Emily W., Point Grey</p>
             </div>
             <div class="review-card fade-in">
-                <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
                 <p class="quote">"The absolute best general contractor in Surrey. Their project management team is phenomenal, and the final result exceeded our wildest expectations."</p>
-                <p class="author">â€” Marcus R., West Surrey</p>
+                <p class="author">— Marcus R., West Surrey</p>
             </div>
         </div>
     </section>
 
-    <footer class="fade-in" style="padding: 40px 5%; line-height: 1.8; margin-top: auto;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <p style="color: var(--secondary); font-weight: 600; margin-bottom: 10px;">Proudly Servicing the Greater Surrey Area</p>
-            <p style="font-size: 0.9rem; margin-bottom: 20px; color: #ddd;">Surrey &bull; North Surrey &bull; West Surrey &bull; Burnaby &bull; Richmond &bull; Coquitlam &bull; Surrey &bull; Langley &bull; New Westminster</p>
-            <p>&copy; 2026 Brick Development. All rights reserved.</p>
+    
+    <footer class="fade-in" style="padding: 60px 5% 40px 5%; background: var(--primary); color: #ccc; line-height: 1.8; margin-top: auto; border-top: 4px solid var(--secondary);">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+            
+            <div>
+                <img src="assets/images/logo.jpg" alt="Brick Development" style="width: 150px; margin-bottom: 20px; border-radius: 4px;">
+                <p style="color: var(--secondary); font-weight: 600; margin-bottom: 10px;">Proudly Servicing Vancouver</p>
+                <p style="font-size: 0.85rem; margin-bottom: 20px;">Vancouver, North Vancouver, West Vancouver, Burnaby, Richmond, Coquitlam, Surrey, Langley, New Westminster</p>
+                <p style="font-size: 0.85rem;">&copy; 2026 Brick Development. All rights reserved.</p>
+            </div>
+
+            <div>
+                <h4 style="color: var(--white); margin-bottom: 15px; font-size: 1.1rem; border-bottom: 1px solid #444; padding-bottom: 10px;">Construction Insights</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <li><a href="blog/blog-1.html" style="color: #aaa; text-decoration: none;">Vancouver Custom Homes</a></li>
+                    <li><a href="blog/blog-2.html" style="color: #aaa; text-decoration: none;">Laneway Houses</a></li>
+                    <li><a href="blog/blog-3.html" style="color: #aaa; text-decoration: none;">Commercial Build-outs</a></li>
+                    <li><a href="blog/blog-4.html" style="color: #aaa; text-decoration: none;">Zoning Bylaws BC</a></li>
+                    <li><a href="blog/blog-5.html" style="color: #aaa; text-decoration: none;">Renovation Costs</a></li>
+                    <li><a href="blog/blog-6.html" style="color: #aaa; text-decoration: none;">Luxury Kitchen Trends</a></li>
+                    <li><a href="blog/blog-7.html" style="color: #aaa; text-decoration: none;">Open Concept Living</a></li>
+                    <li><a href="blog/blog-8.html" style="color: #aaa; text-decoration: none;">Smart Home Integration</a></li>
+                    <li><a href="blog/blog-9.html" style="color: #aaa; text-decoration: none;">High-End Materials</a></li>
+                    <li><a href="blog/blog-10.html" style="color: #aaa; text-decoration: none;">Architectural Design</a></li>
+                    <li><a href="blog/blog-11.html" style="color: #aaa; text-decoration: none;">Heritage Restorations</a></li>
+                    <li><a href="blog/blog-12.html" style="color: #aaa; text-decoration: none;">Building Permits</a></li>
+                    <li><a href="blog/blog-13.html" style="color: #aaa; text-decoration: none;">Energy Efficiency</a></li>
+                    <li><a href="blog/blog-14.html" style="color: #aaa; text-decoration: none;">Seismic Upgrades</a></li>
+                    <li><a href="blog/blog-15.html" style="color: #aaa; text-decoration: none;">Outdoor Living Spaces</a></li>
+                    <li><a href="blog/blog-16.html" style="color: #aaa; text-decoration: none;">Basement Suites</a></li>
+                    <li><a href="blog/blog-17.html" style="color: #aaa; text-decoration: none;">Strata Renovations</a></li>
+                    <li><a href="blog/blog-18.html" style="color: #aaa; text-decoration: none;">Concrete Work</a></li>
+                    <li><a href="blog/blog-19.html" style="color: #aaa; text-decoration: none;">Project Management</a></li>
+                    <li><a href="blog/blog-20.html" style="color: #aaa; text-decoration: none;">Sustainable Building</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="color: var(--white); margin-bottom: 15px; font-size: 1.1rem; border-bottom: 1px solid #444; padding-bottom: 10px;">Frequently Asked Questions</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; display: flex; flex-direction: column; gap: 8px;">
+                    <li><a href="faq/faq-1.html" style="color: #aaa; text-decoration: none;">How much per square foot?</a></li>
+                    <li><a href="faq/faq-2.html" style="color: #aaa; text-decoration: none;">Do you handle building permits?</a></li>
+                    <li><a href="faq/faq-3.html" style="color: #aaa; text-decoration: none;">How long does a custom build take?</a></li>
+                    <li><a href="faq/faq-4.html" style="color: #aaa; text-decoration: none;">Are you WorkSafeBC licensed?</a></li>
+                    <li><a href="faq/faq-5.html" style="color: #aaa; text-decoration: none;">What is a BC Housing warranty?</a></li>
+                    <li><a href="faq/faq-6.html" style="color: #aaa; text-decoration: none;">Do you use subcontractors?</a></li>
+                    <li><a href="faq/faq-7.html" style="color: #aaa; text-decoration: none;">How do you handle change orders?</a></li>
+                    <li><a href="faq/faq-8.html" style="color: #aaa; text-decoration: none;">Is architectural design included?</a></li>
+                    <li><a href="faq/faq-9.html" style="color: #aaa; text-decoration: none;">What is the typical payment schedule?</a></li>
+                    <li><a href="faq/faq-10.html" style="color: #aaa; text-decoration: none;">Can I live in the home during a renovation?</a></li>
+                </ul>
+            </div>
+
         </div>
     </footer>
+
 </body>
 </html>
 
